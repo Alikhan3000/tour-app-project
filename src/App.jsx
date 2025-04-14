@@ -13,7 +13,7 @@ const removeTour = (id) => {
 
   return(
     <main>
-    <h1>Our Tours</h1>
+    <h1>Global Adventure Tours</h1>
     {/* pass state and handlers down to the TourList component */}
     <Gallery tours={tours} setTours={setTours} onRemove={removeTour} />
 
