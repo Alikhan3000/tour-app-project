@@ -11,7 +11,7 @@ const Gallery = ({tours, setTours, onRemove}) => {
     //fetch the list of tours from the API
     const fetchTours = async () => {
         try {
-            const res = await fetch("https://course-api.com/react-tours-project");
+            const res = await fetch("https://api.allorigins.win/raw?url=https://course-api.com/react-tours-project"); //used public CORS proxy because the original link was not accessible due to CORS policy
             //map the API data to only field we need 
             const data = await res.json();  //parse the response to JSON
         const trimmed = data.map((tour) => ({
@@ -25,7 +25,8 @@ const Gallery = ({tours, setTours, onRemove}) => {
         setLoading(false);  //set loading to false
 
     } catch (error) {
-        console.log(error);
+        console.log("Error fetching tours", error); //display error message in console
+        //set error to true if there is an error fetching the data
         setError(true); //set error to true
         setLoading(false); //set loading to false
     }

@@ -15,7 +15,7 @@ const removeTour = (id) => {
     <main>
     <h1>Our Tours</h1>
     {/* pass state and handlers down to the TourList component */}
-    <Gallery tours={tours} setTour={setTour} onRemove={removeTour} />
+    <Gallery tours={tours} setTours={setTours} onRemove={removeTour} />
 
     </main>
 
